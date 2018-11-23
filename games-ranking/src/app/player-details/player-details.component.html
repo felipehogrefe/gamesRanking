@@ -1,0 +1,27 @@
+<div *ngIf="selectedPlayer">
+    <h2>{{selectedPlayer.name | uppercase}} Details</h2>
+    <table>
+      <tbody>
+        <tr>
+          <td width="100">Id:</td>
+          <td width="100">{{selectedPlayer.id}}</td>
+          <td width="100"></td>
+        </tr>
+        <tr>
+          <td>Name: </td>
+          <td>{{selectedPlayer.name}} </td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>Matches: </td>
+          <td>{{selectedPlayer.matches}}</td>
+          <td><button (click)="increaseMatches()">+</button></td>
+        </tr>
+        <tr>
+          <td>Victories:</td>
+          <td>{{selectedPlayer.victories}}</td>
+          <td><button (click)="increaseVictories()">+</button></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>

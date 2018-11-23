@@ -1,0 +1,103 @@
+<h1>
+  Welcome to {{ title }}!
+</h1>
+<div *ngIf="!serverReachable">
+  <h2>
+    Unnable to reach the data server or received corrupted data.
+  </h2>
+</div>
+
+<div *ngIf="serverReachable">
+  <table>
+    <tbody>
+      <tr>
+        <td style="text-align:center">
+          <h2> Current Rank </h2>
+        </td>
+        <td> </td>
+        <td>
+          <h2> Player Details </h2>
+        </td>
+      </tr>
+      <tr>
+        <td width="500" height="500">
+          <ul class="header">
+            <li>
+              <span class="badge">VICTORIES</span>
+              <span class="badge2">MATCHES</span>
+              NAME
+            </li>
+          </ul>
+          <div style="width: 500px; height: 500px; overflow: auto">
+            <ul class="players">
+              <li *ngFor="let player of players" [class.selected]="player === selectedPlayer" (click)="onSelect(player)">
+                <a>
+                  <span class="badge">{{player.victories}}</span>
+                  <span class="badge2">{{player.matches}}</span>
+                  {{player.name}}
+                </a>
+              </li>
+            </ul>
+          </div>
+        </td>
+        <td> </td>
+        <td valign="top">
+          <div *ngIf="selectedPlayer">
+            <h2>{{selectedPlayer.name | uppercase}} Details</h2>
+            <table>
+              <tbody>
+                <tr>
+                  <td width="100">Id:</td>
+                  <td width="100">{{selectedPlayer.id}}</td>
+                  <td width="100"></td>
+                </tr>
+                <tr>
+                  <td>Name: </td>
+                  <td>{{selectedPlayer.name}} </td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>Matches: </td>
+                  <td>{{selectedPlayer.matches}}</td>
+                  <td><button (click)="increaseMatches()">+</button></td>
+                </tr>
+                <tr>
+                  <td>Victories:</td>
+                  <td>{{selectedPlayer.victories}}</td>
+                  <td><button (click)="increaseVictories()">+</button></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <h2> New Player </h2>
+          <table>
+            <tbody>
+              <tr>
+                <td>Name:&nbsp;</td>
+                <td>
+                  <input type="text" #playerName> </td>
+              </tr>
+              <tr>
+                <td>Victories:&nbsp;</td>
+                <td> <input type="number" #playerVictories> </td>
+              </tr>
+              <tr>
+                <td>Matches:</td>
+                <td> <input type="number" #playerMatches> </td>
+              </tr>
+            </tbody>
+          </table>
+          <br />
+          <button type="button" (click)="createPlayer(playerName.value, playerVictories.value, playerMatches.value)">Add
+            to List</button>
+        </td>
+        <td></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+</div>

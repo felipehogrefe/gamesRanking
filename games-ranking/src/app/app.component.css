@@ -1,0 +1,130 @@
+.selected {
+    background-color: #CFD8DC !important;
+    color: white;
+  }
+  .players {
+    margin: 0 0 2em 0;
+    list-style-type: none;
+    padding: 0;
+    width: 25em;
+  }
+
+
+  .blackColorText{
+    color: black;
+  }
+  .redColorText{
+    color: red;
+  }
+
+  .list{
+    width:249px;
+    height:299px;
+    background-color:Gray;
+    overflow-y: auto;
+    max-width:230px;
+    max-height:100px;  
+  }
+
+  .header {
+    margin: 0 0 2em 0;
+    list-style-type: none;
+    padding: 0;
+    width: 25em;
+  }
+  .players li {
+    cursor: pointer;
+    position: relative;
+    left: 0;
+    background-color: #EEE;
+    margin: .5em;
+    padding: .3em 0;
+    height: 1.6em;
+    border-radius: 4px;
+  }
+
+  .players li.selected:hover {
+    background-color: #BBD8DC !important;
+    color: white;
+  }
+  .players li:hover {
+    color: #607D8B;
+    background-color: #DDD;
+    left: .1em;
+  }  
+
+  .header li {
+    position: relative;
+    left: 0;
+    background-color: #EEE;
+    margin: .5em;
+    padding: .3em 0;
+    height: 1.6em;
+    border-radius: 4px;
+  }
+
+  .players .text {
+    position: relative;
+    top: -3px;
+  }
+  .players .badge {
+    display: inline-block;
+    font-size: small;
+    color: white;
+    padding: 0.8em 0.7em 0 0.7em;
+    background-color: #607D8B;
+    line-height: 1em;
+    position: relative;
+    left: -1px;
+    top: -4px;
+    height: 1.8em;
+    width: 4.8em;
+    margin-right: .8em;
+    border-radius: 4px 0 0 4px;
+  }
+  .players .badge2 {
+    display: inline-block;
+    font-size: small;
+    color: white;
+    padding: 0.8em 0.7em 0 0.7em;
+    background-color: rgb(117, 155, 173);
+    line-height: 1em;
+    position: relative;
+    left: -1px;
+    top: -4px;
+    height: 1.8em;
+    width: 4.4em;
+    margin-right: .8em;
+    border-radius: 4px 0 0 4px;
+  }
+
+  .header .badge {
+    display: inline-block;
+    font-size: small;
+    color: white;
+    padding: 0.8em 0.7em 0 0.7em;
+    background-color: #607D8B;
+    line-height: 1em;
+    position: relative;
+    left: -1px;
+    top: -4px;
+    height: 1.8em;
+    width: 4.8em;
+    margin-right: .8em;
+    border-radius: 4px 0 0 4px;
+  }
+  .header .badge2 {
+    display: inline-block;
+    font-size: small;
+    color: white;
+    padding: 0.8em 0.7em 0 0.7em;
+    background-color: rgb(117, 155, 173);
+    line-height: 1em;
+    position: relative;
+    left: -1px;
+    top: -4px;
+    height: 1.8em;
+    width: 4.4em;
+    margin-right: .8em;
+    border-radius: 4px 0 0 4px;
+  }
