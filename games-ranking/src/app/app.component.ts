@@ -71,6 +71,8 @@ export class AppComponent {
       if (response === "OK") {
         this.selectedPlayer.victories++;
         this.selectedPlayer.matches++;
+      }else {
+        //show error component
       }
     }, error => {        
       this.regError(error);
@@ -81,6 +83,8 @@ export class AppComponent {
     this.playerService.increaseMatches(this.selectedPlayer).subscribe(response => {
       if (response === "OK") {
         this.selectedPlayer.matches++;
+      }else {
+        //show error component
       }
     }, error => {        
       this.regError(error);
